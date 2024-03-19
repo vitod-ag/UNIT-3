@@ -50,6 +50,7 @@ class User implements Smarthphone {
 }
 
 //----------------------------------------
+console.log('\n');
 console.log('***Esercizio giorno 4 TypeScript***');
 
 const utente2 = new User('Michele','Mali');
