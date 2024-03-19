@@ -1,6 +1,6 @@
 // Funzione per convertire il saldo residuo in euro formattato
 function convertiEuro(valore: number): string {
-    return valore.toFixed(2).replace('.', ',') + ' euro';
+    return valore.toFixed(2);
   }
 
 interface Smarthphone {
@@ -51,24 +51,26 @@ class User implements Smarthphone {
 
 //----------------------------------------
 console.log('\n');
-console.log('***Esercizio giorno 4 TypeScript***');
-
-const utente2 = new User('Michele','Mali');
+console.log('***Esercizio giorno 5 TypeScript***');
 console.log('\n');
 
+const utente1 = new User('Michele','Mali');
+
+
 // Ricarica del credito dell'utente
-utente2.ricarica(10);
+utente1.ricarica(10);
 
 // Chiamate dell'utente
-utente2.chiamata(8);
-utente2.chiamata(4);
+utente1.chiamata(8);
+utente1.chiamata(4);
 
 // Verifico il saldo residuo e il numero di chiamate effettuate
-console.log(`All\'utente ${utente2.nome} ${utente2.cognome} gli rimangono: ${convertiEuro(utente2.chiamata404())} €`);
-console.log(`Il numero delle chiamate effettuate da ${utente2.nome} ${utente2.cognome} è: ${utente2.getNumeroChiamata()} minuti`);
+console.log(`All\'utente ${utente1.nome} ${utente1.cognome} gli rimangono: ${convertiEuro(utente1.chiamata404())} €`);
+console.log(`Il numero delle chiamate effettuate da ${utente1.nome} ${utente1.cognome} è: ${utente1.getNumeroChiamata()} minuti`);
 
 // Azzero le chiamate
-utente2.azzeraChiamate();
+utente1.azzeraChiamate();
 
 // Verifico quanto gha l'utente dopo aver azzerato
-console.log(`Adesso l\'utente ${utente2.nome} ${utente2.cognome} ha: ${utente2.getNumeroChiamata()} minuti`);
+console.log(`Adesso l\'utente ${utente1.nome} ${utente1.cognome} ha: ${utente1.getNumeroChiamata()} minuti`);
+console.log('\n');

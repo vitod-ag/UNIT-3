@@ -1,6 +1,6 @@
 // Funzione per convertire il saldo residuo in euro formattato
 function convertiEuro(valore) {
-    return valore.toFixed(2).replace('.', ',') + ' euro';
+    return valore.toFixed(2);
 }
 var User = /** @class */ (function () {
     function User(_nome, _cognome) {
@@ -35,9 +35,10 @@ var User = /** @class */ (function () {
     return User;
 }());
 //----------------------------------------
-console.log('***Esercizio giorno 4 TypeScript***');
-var utente1 = new User('Michele', 'Mali');
 console.log('\n');
+console.log('***Esercizio giorno 4 TypeScript***');
+console.log('\n');
+var utente1 = new User('Michele', 'Mali');
 // Ricarica del credito dell'utente
 utente1.ricarica(10);
 // Chiamate dell'utente
@@ -50,3 +51,4 @@ console.log("Il numero delle chiamate effettuate da ".concat(utente1.nome, " ").
 utente1.azzeraChiamate();
 // Verifico quanto gha l'utente dopo aver azzerato
 console.log("Adesso l'utente ".concat(utente1.nome, " ").concat(utente1.cognome, " ha: ").concat(utente1.getNumeroChiamata(), " minuti"));
+console.log('\n');
