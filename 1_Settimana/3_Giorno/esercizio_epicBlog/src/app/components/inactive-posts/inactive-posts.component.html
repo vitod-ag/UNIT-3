@@ -1,12 +1,12 @@
 <ng-container *ngFor="let post of posts; let i = index">
-    <div class="card m-2" style="width: 80%;" *ngIf="!post.active">
+    <div class="card m-2 bg-secondary" style="width: 80%;" *ngIf="!post.active">
         <div class="card-body">
             <h5 class="card-title">{{post.title}}</h5>
             <p class="card-text">{{post.body}}</p>
             <hr>
             <p>{{post.reactions}}</p>
             <p *ngFor="let tag of post.tags">{{tag}}</p>
-            <a [routerLink]="['/post', post.id]" class="btn btn-primary float-end">Leggi di più</a>
+            <a [routerLink]="['/post', post.id]" class="btn btn-warning float-end">Leggi di più</a>
         </div>
     </div>
 </ng-container>
