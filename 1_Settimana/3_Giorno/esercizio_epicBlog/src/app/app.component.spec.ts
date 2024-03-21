@@ -12,16 +12,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'esercizio_epicBlog'`, () => {
+  it(`should have as title 'esercizio'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('esercizio_epicBlog');
+    expect(app.title).toEqual('esercizio');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('esercizio_epicBlog app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('esercizio app is running!');
   });
 });

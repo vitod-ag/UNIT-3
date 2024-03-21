@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "esercizio_epicBlog": {
+    "esercizio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/esercizio-epic-blog",
+            "outputPath": "dist/esercizio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "esercizio_epicBlog:build:production"
+              "browserTarget": "esercizio:build:production"
             },
             "development": {
-              "browserTarget": "esercizio_epicBlog:build:development"
+              "browserTarget": "esercizio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "esercizio_epicBlog:build"
+            "browserTarget": "esercizio:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "64a33ab2-cc00-43d0-81d6-a37478e6ed46"
+    "analytics": "f29799fd-1f77-4418-9277-3c3f3a285310"
   }
 }
