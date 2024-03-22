@@ -12,6 +12,7 @@ import { AudiComponent } from './components/audi/audi.component';
 import { FiatComponent } from './components/fiat/fiat.component';
 import { EvidenceComponent } from './components/evidence/evidence.component';
 import { LoghiComponent } from './components/loghi/loghi.component';
+import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 
 const routes: Route[] = [
   {
@@ -47,7 +48,8 @@ const routes: Route[] = [
     AudiComponent,
     FiatComponent,
     EvidenceComponent,
-    LoghiComponent
+    LoghiComponent,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,
