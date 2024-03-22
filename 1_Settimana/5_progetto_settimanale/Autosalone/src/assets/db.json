@@ -9,21 +9,21 @@
         "available": false
     },
     {
-        "brand": "Fiat",
-        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
-        "model": "500 Abarth",
-        "modelImage": "06/aut-51-iz0271-01p.jpg",
-        "year": 2010,
-        "price": 3500,
-        "available": true
-    },
-    {
         "brand": "Ford",
         "brandLogo": "2016/03/Ford-Logo-600x338.png",
         "model": "Taurus",
         "modelImage": "01/aut-15-iz0614-01p.jpg",
         "year": 2009,
         "price": 5200,
+        "available": false
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "model": "Q7",
+        "modelImage": "06/aut-51-iz0124-01p.jpg",
+        "year": 2020,
+        "price": 41700,
         "available": false
     },
     {
@@ -45,12 +45,13 @@
         "available": true
     },
     {
-        "brand": "Audi",
-        "brandLogo": "2015/10/Audi-Logo-600x338.png",
-        "model": "Q7",
-        "modelImage": "06/aut-51-iz0124-01p.jpg",
-        "year": 2020,
-        "price": 41700,
-        "available": false
+        "brand": "Fiat",
+        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+        "model": "500 Abarth",
+        "modelImage": "06/aut-51-iz0271-01p.jpg",
+        "year": 2010,
+        "price": 3500,
+        "available": true
     }
+
 ]
