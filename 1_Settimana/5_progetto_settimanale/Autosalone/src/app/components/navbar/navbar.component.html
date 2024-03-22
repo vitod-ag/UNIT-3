@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../../../assets/img/logo_concessionaria.png" style="width: 70px;" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-secondary" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" [routerLink]="['/fiat']" routerLinkActive="active">Fiat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" [routerLink]="['/ford']" routerLinkActive="active">Ford</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary" [routerLink]="['/audi']" routerLinkActive="active">Audi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
