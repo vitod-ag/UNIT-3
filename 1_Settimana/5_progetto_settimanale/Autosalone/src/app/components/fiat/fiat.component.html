@@ -1,1 +1,33 @@
-<p>fiat works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+          <img [src]="'https://listcarbrands.com/wp-content/uploads/'+cars[0].brandLogo" [alt]="cars[0].brand">
+        </div>
+        <div class="col-6 bg-secondary">
+          <h2>Le nostre auto {{cars[0].brand}}</h2>
+        </div>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+        <div *ngFor="let relate of cars" class="my-5 d-flex flex-column border p-0 shadow w-75" [class.border-danger]="!relate.available" [class.border-success]="relate.available">
+            <div>
+              <img
+                src="https://www.kimballstock.com/pix/car/p/{{relate.modelImage}}"
+                alt="" width="100%"
+              />
+            </div>
+            <div class="border" [class.bg-success]="relate.available" [class.bg-danger]="!relate.available">
+              <h2 class="my-2">{{ relate.brand }} {{ relate.model }}</h2>
+              <div class="d-flex justify-content-center">
+                <h4 class="mb-1 mx-3">ANNO: {{ relate.year }}</h4>
+                <h4 class="mb-auto">PREZZO: {{ relate.price }}€</h4>
+              </div>
+      
+              <p class="mb-auto">
+                  <span *ngIf="relate.available; else notAvaible">PRONTA CONSEGNA: Disponibile</span>
+                  <ng-template #notAvaible>PRONTA CONSEGNA: Non disponibile</ng-template>
+                </p>
+              <a class="btn border m-2 rounded-5 bg-black text-white over" ariaCurrentWhenActive="page" routerLinkActive="active" [routerLink]="['/details',relate.model]">Mostra più dettagli</a>
+            </div>
+          </div>
+    </div>
+</div>

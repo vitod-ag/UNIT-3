@@ -7,7 +7,7 @@ import { Car } from 'src/app/models/car.interface';
   styleUrls: ['./loghi.component.scss']
 })
 
-export class LoghiComponent {
+export class LoghiComponent implements OnInit {
   car!: Car[]
   brands: Car[] = []
 
@@ -21,7 +21,6 @@ async getBrand() {
   let data = await response.json();
   this.car = data;
   this.brands = this.car.slice(0,3)
-
 }
 }
 

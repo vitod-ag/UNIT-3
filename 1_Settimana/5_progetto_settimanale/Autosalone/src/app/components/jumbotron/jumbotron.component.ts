@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./jumbotron.component.scss']
 })
 export class JumbotronComponent {
-
 }

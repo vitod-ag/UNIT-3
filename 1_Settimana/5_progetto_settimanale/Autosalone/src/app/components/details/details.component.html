@@ -1,0 +1,22 @@
+<div class="container" *ngIf="car">
+  <div class="my-5 d-flex flex-column border p-0 shadow w-75" [class.border-danger]="!car.available" [class.border-success]="car.available">
+    <div>
+      <img
+        src="https://www.kimballstock.com/pix/car/p/{{car.modelImage}}"
+        alt="" width="100%"
+      />
+    </div>
+    <div class="border" [class.bg-success]="car.available" [class.bg-danger]="!car.available">
+      <h2 class="my-2">{{ car.brand }} {{ car.model }}</h2>
+      <div class="d-flex justify-content-center">
+        <h4 class="mb-1 mx-3">ANNO: {{ car.year }}</h4>
+        <h4 class="mb-auto">PREZZO: {{ car.price }}€</h4>
+      </div>
+
+      <p class="mb-auto">
+          <span *ngIf="car.available; else notAvaible">PRONTA CONSEGNA: Disponibile</span>
+          <ng-template #notAvaible>PRONTA CONSEGNA: Non disponibile</ng-template>
+        </p>
+    </div>
+  </div>
+</div>

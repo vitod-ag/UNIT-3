@@ -18,6 +18,4 @@ export class ActivePostsComponent {
     const data = await response.json();
     this.posts = data;
   }
-
-
 }

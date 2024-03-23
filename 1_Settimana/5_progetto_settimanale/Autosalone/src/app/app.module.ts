@@ -13,6 +13,7 @@ import { FiatComponent } from './components/fiat/fiat.component';
 import { EvidenceComponent } from './components/evidence/evidence.component';
 import { LoghiComponent } from './components/loghi/loghi.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Route[] = [
   {
@@ -32,6 +33,10 @@ const routes: Route[] = [
     component: FiatComponent
   },
   {
+    path: 'details/:id',
+    component: DetailsComponent
+  },
+  {
     path: '**',
     component: Error404Component
   }
@@ -49,7 +54,8 @@ const routes: Route[] = [
     FiatComponent,
     EvidenceComponent,
     LoghiComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
