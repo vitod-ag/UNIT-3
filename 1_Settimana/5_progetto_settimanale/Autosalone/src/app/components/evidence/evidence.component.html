@@ -18,7 +18,7 @@
         <p class="mb-auto">
             <span *ngIf="relate.available; else notAvaible">PRONTA CONSEGNA: Disponibile</span>
             <ng-template #notAvaible>PRONTA CONSEGNA: Non disponibile</ng-template>
-          </p>
+        </p>
         <a class="btn border m-2 rounded-5 bg-primary text-white over" ariaCurrentWhenActive="page" routerLinkActive="active" [routerLink]="['/details',relate.model]">Mostra più dettagli</a>
       </div>
     </div>

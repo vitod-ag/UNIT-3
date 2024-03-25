@@ -8,8 +8,8 @@ import { Car } from 'src/app/models/car.interface';
 })
 export class EvidenceComponent {
     cars: Car[] = []; //array che conterrà tutti i post recuperati dal file JSON
-    related: Car[] = []; // array che conterrà i post correlati selezionati casualmente
-    alreadyIncluded: number[] = []; //array che conterrà gli indici dei post già inclusi nei post correlati, per evitare
+    related: Car[] = []; // array che conterrà i post delle auto correlate e selezionati casualmente
+    alreadyIncluded: number[] = []; //array che conterrà gli indici dei post già inclusi nei post correlati, per evitare che siano presi due volte
     isLoaded:boolean = false;   // booleano che mi dice se la car è stata caricata o no
 
     constructor() {

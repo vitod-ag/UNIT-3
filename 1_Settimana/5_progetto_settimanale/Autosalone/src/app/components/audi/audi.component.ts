@@ -8,7 +8,7 @@ import { Car } from 'src/app/models/car.interface';
 })
 export class AudiComponent {
   cars: Car[] = []
-  fiatCar: Car[] = []
+  audiCar: Car[] = []
 
   constructor() {
     this.getAudi();
