@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "progettoPomeridiano": {
+    "esercizio_AmazingCommerce": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/progetto-pomeridiano",
+            "outputPath": "dist/esercizio-amazing-commerce",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "progettoPomeridiano:build:production"
+              "browserTarget": "esercizio_AmazingCommerce:build:production"
             },
             "development": {
-              "browserTarget": "progettoPomeridiano:build:development"
+              "browserTarget": "esercizio_AmazingCommerce:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "progettoPomeridiano:build"
+            "browserTarget": "esercizio_AmazingCommerce:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "a04ad2b9-b228-4ccf-8670-53719cc1fedc"
+    "analytics": "f4864965-8a38-49d2-9f05-019fcf9cbf37"
   }
 }
