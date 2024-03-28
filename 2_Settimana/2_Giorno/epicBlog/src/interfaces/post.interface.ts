@@ -5,5 +5,4 @@ export interface PostInterface {
   reactions: number
   tags: Array<string>
   active: boolean
-
 }
