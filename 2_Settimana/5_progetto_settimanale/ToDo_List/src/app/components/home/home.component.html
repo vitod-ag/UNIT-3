@@ -1,0 +1,14 @@
+<div class="container d-flex flex-column">
+  <div class="border rounded-3 mt-3 d-flex"
+    [ngClass]="{'bg-success': todo.completed, 'bg-danger': !todo.completed, 'opacity': todo.completed || !todo.completed}"
+    *ngFor="let todo of todos">
+    <div class="containerCheck m-2">
+      <input type="checkbox">
+    </div>
+    <div class="text d-flex flex-column p-2">
+      <h2 class="fs-5">{{ todo.todo | uppercase }}</h2>
+      <p>Assigned to: {{ getName(todo.userId) }}</p>
+    </div>
+
+  </div>
+</div>

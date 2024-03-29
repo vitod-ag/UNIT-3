@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h1>Hey Boss, what's my task for the day?</h1>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary me-2" aria-label="View all tasks">
+          <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="bi bi-list-task m-1"></i>All
+          </a>
+        </button>      
+        <button type="button" class="btn btn-primary me-2" aria-label="View all tasks">
+          <a class="navbar-brand" [routerLink]="['/done']">
+            <i class="bi bi-check2-all m-1"></i>Done
+          </a>
+        </button>
+        <button type="button" class="btn btn-primary me-2" aria-label="View all tasks">
+          <a class="navbar-brand" [routerLink]="['/undone']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="bi bi-three-dots m-1"></i>Undone
+          </a>
+        </button>
+        <button type="button" class="btn btn-primary me-2" aria-label="View all tasks">
+          <a class="navbar-brand" [routerLink]="['/users']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="bi bi-people m-1"></i>Users
+          </a>
+        </button>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <input type="text" placeholder="Search" />
+        </div>
+    </div>
+  </div>
