@@ -1,1 +1,12 @@
-<p>undone works!</p>
+<div class="container d-flex flex-column">
+    <div class="opacity bg-danger-subtle rounded-3 mt-3 d-flex" 
+      *ngFor="let todo of getUndone()">
+      <div class="containerCheck m-2">
+        <input type="checkbox">
+      </div>
+      <div class="text d-flex flex-column p-2">
+        <h2 class="fs-5">{{ todo.todo | uppercase }}</h2>
+        <p>Assigned to: {{ getName(todo.userId) }}</p>
+      </div>
+    </div>
+  </div>

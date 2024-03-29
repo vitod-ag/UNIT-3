@@ -1,6 +1,6 @@
 <div class="container d-flex flex-column">
   <div class="border rounded-3 mt-3 d-flex"
-    [ngClass]="{'bg-success': todo.completed, 'bg-danger': !todo.completed, 'opacity': todo.completed || !todo.completed}"
+    [ngClass]="{'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed, 'opacity': todo.completed || !todo.completed}"
     *ngFor="let todo of todos">
     <div class="containerCheck m-2">
       <input type="checkbox">
@@ -9,6 +9,5 @@
       <h2 class="fs-5">{{ todo.todo | uppercase }}</h2>
       <p>Assigned to: {{ getName(todo.userId) }}</p>
     </div>
-
   </div>
 </div>
