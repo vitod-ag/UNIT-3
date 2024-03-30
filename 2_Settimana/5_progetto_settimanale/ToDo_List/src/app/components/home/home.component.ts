@@ -13,40 +13,34 @@ export class HomeComponent implements OnInit {
 
   todos: Todo[] = [];
   users: User[] = [];
-  combinedItems: (Todo | User)[] = [];
+  combinedItems: (Todo & { assignedTo: string })[] = [];
 
-  constructor (private srvToDo:TodoService, private srvUser: UserService) {}
+  constructor(private srvToDo: TodoService, private srvUser: UserService) {}
+
   ngOnInit(): void {
-    this.addToDoList();
-    this.addUser();
+    this.getData();
   }
 
-  async addToDoList() {
+  async getData() {
     try {
       this.todos = await this.srvToDo.getTodos();
-    }catch (error) {
-      console.error('Error fetching ToDoList:', error);
-    }
-  }
-
-  async addUser() {
-    try {
       this.users = await this.srvUser.getUsers();
-    }catch (error) {
-      console.error('Error fetching User:', error);
+      
+      this.combinedItems = this.todos.map(todo => {
+        const assignedTo = this.getName(todo.userId);
+        return { ...todo, assignedTo };
+      });
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
   }
 
-  getName(id:number) {
-    let name = ''
-    this.users.forEach((value) => {
-      if(value.id === id) {
-        name = `${value.firstName} ${value.lastName}`
-      }
-    })
-    return name;
+  getName(id: number): string {
+    const user = this.users.find(user => user.id === id);
+    return user ? `${user.firstName} ${user.lastName}` : '';
+  }
+
+  toggleCompleted(todo: Todo & { assignedTo: string }) {
+    todo.completed = !todo.completed; 
   }
 }
-
-  
-

@@ -13,43 +13,46 @@ export class DoneComponent implements OnInit {
 
   todos: Todo[] = [];
   users: User[] = [];
+  combinedItems: (Todo & { assignedTo: string })[] = [];
 
   constructor(private srvToDo: TodoService, private srvUser: UserService) {}
 
-    ngOnInit(): void {
-      this.addToDoList();
-      this.addUser();
-    }
-  
-    async addToDoList() {
-      try {
-        this.todos = await this.srvToDo.getTodos();
-      }catch (error) {
-        console.error('Error fetching ToDoList:', error);
-      }
-    }
-  
-    async addUser() {
-      try {
-        this.users = await this.srvUser.getUsers();
-      }catch (error) {
-        console.error('Error fetching User:', error);
-      }
-    }
+  ngOnInit(): void {
+    this.getData();
+  }
 
-    getName(id:number) {
-      let name = ''
-      this.users.forEach((value) => {
-        if(value.id === id) {
-          name = `${value.firstName} ${value.lastName}`
-        }
-      })
-      return name;
-    }
-
-    getDone(): Todo[] {
-      return this.todos.filter(todo => todo.completed)
+  async getData() {
+    try {
+      this.todos = await this.srvToDo.getTodos();
+      this.users = await this.srvUser.getUsers();
+      
+      this.combinedItems = this.todos.map(todo => {
+        const assignedTo = this.getName(todo.userId);
+        return { ...todo, assignedTo };
+      });
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
   }
+
+  getName(id: number): string {
+    const user = this.users.find(user => user.id === id);
+    return user ? `${user.firstName} ${user.lastName}` : '';
+  }
+
+  toggleCompleted(todo: Todo & { assignedTo: string }) {
+    todo.completed = !todo.completed; // Inverti lo stato del completamento del todo
+    
+    // Qui puoi implementare la logica per salvare il cambiamento dello stato del todo sul backend,
+    // utilizzando il servizio TodoService, se necessario.
+  }
+  getDone(): (Todo & { assignedTo: string })[] {
+    return this.combinedItems.filter(todo => todo.completed);
+  }
+
+  getUndone(): (Todo & { assignedTo: string })[] {
+    return this.combinedItems.filter(todo => !todo.completed);
+  }
+}
 
 

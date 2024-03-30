@@ -1,13 +1,14 @@
 <div class="container d-flex flex-column">
-  <div class="border rounded-3 mt-3 d-flex"
-    [ngClass]="{'bg-success-subtle': todo.completed, 'bg-danger-subtle': !todo.completed, 'opacity': todo.completed || !todo.completed}"
-    *ngFor="let todo of todos">
-    <div class="containerCheck m-2">
-      <input type="checkbox">
+  <ng-container *ngFor="let item of combinedItems">
+    <div class="card-body rounded-3 mt-3 d-flex"
+      [ngClass]="{'bg-success-subtle': item.completed, 'bg-danger-subtle': !item.completed}">
+      <div class="containerCheck m-2">
+        <input type="checkbox" [checked]="item.completed" (change)="toggleCompleted(item)">
+      </div>
+      <div class="text d-flex flex-column p-2">
+        <h2 class="fs-5 fw-semibold">{{ item.todo }}</h2>
+        <p>Assigned to: {{ item.assignedTo }}</p>
+      </div>
     </div>
-    <div class="text d-flex flex-column p-2">
-      <h2 class="fs-5">{{ todo.todo | uppercase }}</h2>
-      <p>Assigned to: {{ getName(todo.userId) }}</p>
-    </div>
-  </div>
+  </ng-container>
 </div>
