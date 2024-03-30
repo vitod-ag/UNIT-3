@@ -41,10 +41,7 @@ export class DoneComponent implements OnInit {
   }
 
   toggleCompleted(todo: Todo & { assignedTo: string }) {
-    todo.completed = !todo.completed; // Inverti lo stato del completamento del todo
-    
-    // Qui puoi implementare la logica per salvare il cambiamento dello stato del todo sul backend,
-    // utilizzando il servizio TodoService, se necessario.
+    todo.completed = !todo.completed;
   }
   getDone(): (Todo & { assignedTo: string })[] {
     return this.combinedItems.filter(todo => todo.completed);

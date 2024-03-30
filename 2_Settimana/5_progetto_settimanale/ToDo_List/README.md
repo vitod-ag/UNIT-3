@@ -1,27 +1,10 @@
 # ToDoList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+Questo progetto è stato generato con Angular CLI versione 16.2.12 prendendo i dati da un database locale.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Durante il suo funzionamento possiamo notare che: ci sono 4 bottoni che mi reindirizzano su diverse rotte.
+Il primo mi fa vedere tutti i task completati e non di ogni utente,
+il secondo mi fa vedere solo quelli completati e il terzo solo quelli non completati, mentre l'ultimo mostra ogni utente con i suoi task che ha completato o meno. Da notare che qualsiasi task su qualsiasi rotta si può checkare o decheckare in modo da farlo sparire dalla lista precedente. Il tutto si svolge in una Single Page Application grazie ad Angular.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
