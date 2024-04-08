@@ -1,27 +1,11 @@
 # ProgettoSettimanale
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+MovieCiack! è una SPA fatta in Angular CLI basata sulla visualizzazione di film disponibili dove li si può inserire nei preferiti cliccando il cuore nella card del film, oppure si può togliere dalla lista preferiti ricliccando lo stesso nei preferiti sotto la scheda dell'utente.
+Un'altra opzione disponibile accanto al "preferiti" è il mostra dettagli dove si può vedere nel dettaglio il film in questione.
+Tutto ciò però lo si può fare solo se si è loggati in MovieCiack!, altrimenti ci si può registrare e farlo in seguito.
 
-## Development server
+## Author
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Nome: Vito Dagnello
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
