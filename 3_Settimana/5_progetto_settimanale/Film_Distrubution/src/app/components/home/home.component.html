@@ -1,0 +1,8 @@
+<h1 class="text-center mt-3">Benvenuti su MoviesCiak!!</h1>
+<hr>
+<div class="d-grid gap-2">
+    <h3 *ngIf="!user" class="text-center mt-5 mb-3">Per accedere ai contenuti: <br>
+         <a class="btn btn-outline-primary btn-lg mt-2" [routerLink]="['login']">Logga qui</a> <br>
+        oppure <br> <a  class="btn btn-outline-primary btn-lg mt-2" [routerLink]="['register']">Registrati</a></h3>
+    <app-film *ngIf="user"></app-film>
+</div>
