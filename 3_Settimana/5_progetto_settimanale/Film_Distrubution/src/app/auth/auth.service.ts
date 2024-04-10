@@ -15,7 +15,6 @@ export class AuthService {
     apiURL = environment.apiURL;
     jwtHelper = new JwtHelperService();
 
-    // elementi per gestire la procedura di login
     private authSub = new BehaviorSubject<AuthData | null>(null);
     user$ = this.authSub.asObservable();
     timeOut: any;

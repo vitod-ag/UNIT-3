@@ -13,18 +13,6 @@
       "id": 3
     },
     {
-      "email": "acopetti99@gmail.com",
-      "password": "$2a$10$zrrRTJMiNVrBBlrz0dW1r.T2xP6cuyeTXqrvr1q23MEUjeYLUpGGG",
-      "name": "Antonio Copetti",
-      "id": 4
-    },
-    {
-      "email": "luigi@copetti.it",
-      "password": "$2a$10$q0QNrkmEpdSGCOqkBrJnEeadNqlXsIT.HiJl99QoxYE8QzJZuzb2O",
-      "name": "Luigi Copetti",
-      "id": 5
-    },
-    {
       "email": "pippo@pippo.com",
       "password": "$2a$10$8PJVbet4shErP8x6.Hgr4.nJGL1BJ3RyLD1V4gjxfeP6nKC3yIFAq",
       "name": "Pippo Biscia",
@@ -71,16 +59,6 @@
       "userId": 3,
       "movieId": 632357,
       "id": 35
-    },
-    {
-      "userId": 4,
-      "movieId": 460465,
-      "id": 36
-    },
-    {
-      "userId": 4,
-      "movieId": 567189,
-      "id": 37
     },
     {
       "userId": 6,
